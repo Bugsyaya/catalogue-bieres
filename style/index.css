@@ -1,0 +1,25 @@
+html {
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100wh;
+}
+
+#liste-bieres {
+	display: grid;
+	width: 80%;
+	margin: auto;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 2em;
+	row-gap: 2em;
+	justify-items: center;
+}
+
+img {
+	max-height: 300px;
+}
+
+.biere {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
