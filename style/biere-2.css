@@ -1,12 +1,14 @@
 h2 {
     margin: 0;
 }
-nav {
+nav, footer {
     margin: 0;
     background-color: #882675;
     color: #ffffff;
     text-decoration: none;
     justify-content: center;
+    display: flex; 
+    flex-direction: row;
 }
 
 img {
