@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <head>
     <!-- Compiled and minified CSS -->
@@ -18,8 +19,8 @@
 <nav>
     <div class="nav-wrapper" style="background-color: black;">
         <a href="#" class="brand-logo center">AB:06</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <i class="test large material-icons">chevron_left</i>
+        <ul id="nav-mobile" class="left hide-on-med-and-down" style="padding-left: 2rem;">
+            <i class="large material-icons">chevron_left</i>
         </ul>
     </div>
 </nav>
@@ -30,7 +31,7 @@
         <div class="col s5">
             <div class="row">
                 <div class="col 5">
-                    <img class="materialboxed" width="170" src="../media/biere-17.png" style="min-height: 450px;">
+                    <img class="materialboxed" width="140" src="../media/biere-17.png" style="min-height: 400px;">
                 </div>
                 <div class="col 7">
                     <p>First brewed : 04/2011</p>
@@ -39,13 +40,21 @@
                     <p>Boil volume : 25 litres</p>
 
                     <div>
-                        <p>Food pairing</p>
-                        <ul class="">
+                        <p>Food pairing :</p>
+                        <ul class="collection">
                             <li class="collection-item" style="font-size: 0.8rem;">Coffee dusted venison loin</li>
                             <li class="collection-item" style="font-size: 0.8rem;">Memphis-style beef short ribs</li>
                             <li class="collection-item" style="font-size: 0.8rem;">Chocolate orange brownies</li>
                         </ul>
                     </div>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>Déjà bu</span>
+                        </label>
+
+                    </p>
 
                 </div>
             </div>
@@ -58,10 +67,10 @@
                         <i class="small material-icons">star</i>
                         <i class="small material-icons">star</i>
                         <i class="small material-icons">star_border</i>
-
                     </div>
-
-
+                    <p>	"Our sixth Abstrakt, this imperial black IPA combined dark malts with a monumental triple dry-hop, using an all-star team of some of our favourite American hops. Roasty and resinous."</p>
+                    <p>Boil down to desired OG (about 17 litres).</p>
+                    <p style="font-style: italic;">Sam Mason</p>
                 </div>
             </div>
 
@@ -72,31 +81,55 @@
                     <thead>
                     <tr>
                         <th>Malt</th>
-                        <th>Hops</th>
-                        <th>Yeast</th>
                     </tr>
                     </thead>
 
                     <tbody>
                     <tr>
+                        <td></td>
                         <td>Pale Ale</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
+                        <td>6.13Kg</td>
                     </tr>
                     <tr>
-                        <td>Yeast</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
+                        <td></td>
+                        <td>Crystal 150</td>
+                        <td>0.25Kg</td>
                     </tr>
                     <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
+                        <td></td>
+                        <td>Carafa Special Malt</td>
+                        <td>1 MILLION!!!</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" rows="7" style="border: 1px solid black; margin-top: 7rem;">
+                            </textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-small" style="display: flex;justify-content: center;max-width: 300px;margin-left: auto;">Précédent</a>
+
+        </div>
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-small" style="display: flex;justify-content: center;max-width: 300px;margin-right: auto;">Suivant</a>
+
+        </div>
+
+    </div>
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large orange" style="bottom: 100px;">
+            <i class="large material-icons">mode_edit</i>
+        </a>
     </div>
 </main>
 
