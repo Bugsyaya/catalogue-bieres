@@ -48,4 +48,12 @@ body {
     bottom: 15%;
     right: 5rem;
     border-radius: 2rem;
+    color: #26a69a;
+    border: 1px solid #26a69a;
+    background: none;
+    box-shadow: none;
+}
+
+.beer-edit-button:hover {
+    color: white;
 }
