@@ -22,6 +22,10 @@ li {
     color: black;
 }
 
+.bottom {
+    vertical-align: bottom;
+}
+
 .blue {
     background-color: cyan;
 }
