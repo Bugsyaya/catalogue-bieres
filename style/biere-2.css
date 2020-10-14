@@ -1,0 +1,29 @@
+h2 {
+    margin: 0;
+}
+nav, footer {
+    margin: 0;
+    background-color: #882675;
+    color: #ffffff;
+    text-decoration: none;
+    justify-content: center;
+    display: flex; 
+    flex-direction: row;
+}
+
+img {
+    width: 50%;
+    margin: 5px;
+    display: inline-block;
+}
+
+.waves-effect {
+    background-color: #882675;
+    margin: 10px;
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

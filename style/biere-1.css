@@ -1,0 +1,33 @@
+#beerPhoto {
+    height: 30em;
+}
+
+#foodPairing {
+    margin-left: 1em;
+}
+
+img {
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+.alignCenterTextFooter{
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.utilityButtons {
+    margin: 2em 0;
+}
+
+.spacer {
+    margin: 4em;
+}
+
+.dataName {
+    font-weight: 700;
+}
+
+.customContainer {
+    margin: 0 auto;
+    width: 90%;
+}

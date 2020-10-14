@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Catalogue de bières</title>
+	
+	<!-- Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="../style/biere-8.css">
+	
+	<!-- Date picker -->
+	<script>
+       document.addEventListener('DOMContentLoaded', () => {
+           M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+               format: 'dd/mm/yyyy',
+               firstDay: 1,
+               i18n: {
+                   labelMonthNext: 'Mois suivant',
+                   labelMonthPrev: 'Mois précédent',
+                   labelMonthSelect: 'Selectionner le mois',
+                   labelYearSelect: 'Selectionner une année',
+                   months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                   monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+                   weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+                   weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+                   weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+                   done: 'OK',
+                   cancel: 'Annuler',
+                   close: 'Fermer',
+               }
+           });
+       });
+	</script>
+</head>
+<body>
+	<!-- Title -->
+	<nav>
+		<div class="nav-wrapper teal darken-4">
+			<a class="brand-logo center">Fake Lager</a>
+			<ul id="nav-mobile">
+				<li><a href="../index.html"><i class="material-icons">arrow_back</i></a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="container row">
+		<!-- Left column -->
+		<div class="col s12 l6 left-col">
+			<!-- Image -->
+			<div class="col img-wrapper">
+				<img class="responsive-img" src="../media/biere-8.png" alt="Bière Fake Lager">
+			</div>
+			<!-- Info -->
+			<ul class="col s8 collection">
+				<li class="collection-item">Depuis <strong>Mars 2013</strong></li>
+				<li class="collection-item"><strong>4.4</strong> de pH</li>
+				<li class="collection-item">Atténuation: <strong>78 %</strong></li>
+				<li class="collection-item">Volume d'ébullition: <strong>25 L</strong></li>
+				<li class="collection-item">
+                    Accords
+                    <ul class="browser-default">
+                        <li>Gateaux de crabe frit et salsa à l'avocat</li>
+                        <li>Rouleaux au porc frit et sauce piquante</li>
+                        <li>Key Lime Pie</li>
+                    </ul>
+				</li>
+			</ul>
+			
+			<p class="col s12 tagline">
+				Bohemian Pilsner.
+			</p>
+			
+			<div class="col s12 valign-wrapper">
+				<label class="black-text col"><input type="checkbox"> <span>Déjà bu</span></label>
+				<label class="picker"><input type="text" class="datepicker col" placeholder="Date de dégustation"></label>
+			</div>
+
+            <!-- Rating -->
+			<div class="col s12 rating">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star_border</i>
+			</div>
+			
+			<p class="col s12">
+				Fake is the new black. Fake is where it is at. Fake Art, fake brands, fake breasts, and fake lager. We want to play our part in the ugly fallout from the Lager Dream. Say hello to Fake Lager – a zesty, floral 21st century faux masterpiece with added BrewDog bitterness.
+			</p>
+		</div>
+
+        <!-- Mobile buttons -->
+        <div class="col s12 center-align hide-on-large-only">
+            <a class="btn"><i class="material-icons left">arrow_back</i> Précédent</a>
+            <a class="btn"><i class="material-icons right">arrow_forward</i> Suivant</a>
+        </div>
+		
+		<!-- Right column -->
+		<div class="col s12 l6">
+			<!-- Ingredients table -->
+			<table class="card-panel">
+				<thead>
+					<tr><th colspan="2">Ingrédients</th> <th>Ajout</th> <th>Quantité</th></tr>
+				</thead>
+				<tbody>
+					<tr><th colspan="4">Malts</th></tr>
+					<tr><td></td> <td colspan="2">Extra Pale</td>      <td>3,33 kg</td></tr>
+					<tr><td></td> <td colspan="2">Munich</td>          <td>0,42 kg</td></tr>
+					<tr><td></td> <td colspan="2">Caramalt</td>        <td>0,28 kg</td></tr>
+					<tr><td></td> <td colspan="2">Acidulated Malt</td> <td>0,07 kg</td></tr>
+					
+					<tr><th colspan="4">Houblons</th></tr>
+					<tr><td></td> <td>Magnum</td>      <td>Début</td>  <td>7.5 g</td></tr>
+					<tr><td></td> <td>Magnum</td>      <td>Milieu</td> <td>5 g</td></tr>
+					<tr><td></td> <td>Hersbrucker</td> <td>Milieu</td> <td>6,25 g</td></tr>
+					<tr><td></td> <td>Saaz</td>        <td>Milieu</td> <td>6,25 g</td></tr>
+					<tr><td></td> <td>Hersbrucker</td> <td>Fin</td>    <td>18,75 g</td></tr>
+					<tr><td></td> <td>Saaz</td>        <td>Fin</td>    <td>18,75 g</td></tr>
+					
+					<tr><th colspan="4">Levure</th></tr>
+					<tr><td></td> <td colspan="3">Wyeast 2007 - Pilsen Lager™</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+        <!-- Desktop buttons -->
+        <div class="col s12 center-align hide-on-med-and-down">
+            <a class="btn"><i class="material-icons left">arrow_back</i> Précédent</a>
+            <a class="btn"><i class="material-icons right">arrow_forward</i> Suivant</a>
+        </div>
+	</div>
+</body>
+</html>

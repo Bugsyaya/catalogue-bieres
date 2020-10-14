@@ -1,0 +1,32 @@
+tr,td,th {
+    table-layout: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.img-biere {
+    width: 125%;
+    position: relative;
+    padding-right: 15%;
+}
+
+li {
+    padding-left: 10%;
+}
+
+.no-margin {
+    margin: 0;
+    height: 2px;
+}
+
+.black-txt {
+    color: black;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.blue {
+    background-color: cyan;
+}

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.page-footer {
+    padding-top: 0;
+}
+
+.fixed-action-btn {
+    bottom: 73px;
+}
+
+.rate, .already-drinked, .degustation-date {
+    margin: 20px 0;
+}
+
+.beer-image {
+    max-height: 450px;
+}
+
+.nav-wrapper {
+    margin: 0 20px;
+}
