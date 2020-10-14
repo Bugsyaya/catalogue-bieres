@@ -9,6 +9,15 @@ tr,td,th {
     width: 100px;
 }
 
+li {
+    padding-left: 50px;
+}
+
+.no-margin {
+    margin: 0;
+    height: 1px;
+}
+
 .blue {
     background-color: cyan;
 }
