@@ -4,3 +4,12 @@
 .icon-block .material-icons {
     font-size: inherit;
 }
+
+h5 {
+    border-bottom: 1px solid orange;
+    padding-bottom: 0.5rem;
+}
+
+td, th {
+    border-bottom: 1px solid darkgrey;
+}
