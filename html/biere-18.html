@@ -25,18 +25,40 @@
       <div class="row">
         <div class="col s6">
           <div class="col s6">
-            <img class="materialboxed" width="70" id="beer-image_url" />
+            <div>
+              <img class="materialboxed" width="70" id="beer-image_url" />
+            </div>
+            <div id="beer-tagline"></div>
+            <div id="beer-rating">
+              <i class="material-icons">star</i>
+              <i class="material-icons">star</i>
+              <i class="material-icons">star</i>
+              <i class="material-icons">star</i>
+              <i class="material-icons">star_border</i>
+            </div>
+            <div id="beer-description"></div>
+            <div id="beer-brewers_tips">Brewer tips : <span id="beer-brewers_tips-data"></span></div>
+            <div id="beer-contributed_by">Contributed by : <span id="beer-contributed_by-data"></span></div>
           </div>
+
           <div class="col s6">
-            <div id="beer-first_brewed"></div>
-            <div id="beer-ph"></div>
-            <div id="beer-attenuation_level"></div>
+            <div id="beer-first_brewed">
+              First brewed :
+              <span id="beer-first_brewed-data"></span>
+            </div>
+            <div id="beer-ph">
+              PH :
+              <span id="beer-ph-data"></span>
+            </div>
+            <div id="beer-attenuation_level">
+              Attenuation level :
+              <span id="beer-attenuation_level-data"></span>
+            </div>
             <div id="beer-boil_volume">
+              Boil volume :
               <span id="beer-boil_volume-value"></span> <span id="beer-boil_volume-unit"></span>
             </div>
-            <div id="beer-food_pairing">
-              <ul id="beer-food_pairing-list"></ul>
-            </div>
+            <div id="beer-food_pairing">Food pairing :</div>
             <div id="beer-deja_bu">
               <label>
                 <input type="checkbox" id="beer-deja_bu-checkbox" checked="checked" />
@@ -50,29 +72,13 @@
           <table class="striped highlight responsive-table">
             <thead>
               <tr>
+                <th>Category</th>
                 <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+                <th>Amount</th>
               </tr>
             </thead>
 
-            <tbody>
-              <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
-              </tr>
-              <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-              </tr>
-              <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
-              </tr>
-            </tbody>
+            <tbody id="beer-ingredients"></tbody>
           </table>
         </div>
       </div>
@@ -107,11 +113,47 @@
         console.log(beer)
 
         document.querySelector('#beer-image_url').setAttribute('src', beer.image_url)
+        document.querySelector('#beer-first_brewed-data').textContent = beer.first_brewed
+        document.querySelector('#beer-ph-data').textContent = beer.ph
+        document.querySelector('#beer-attenuation_level-data').textContent = beer.attenuation_level
+        document.querySelector('#beer-boil_volume-value').textContent = beer.boil_volume.value
+        document.querySelector('#beer-boil_volume-unit').textContent = beer.boil_volume.unit
+
+        let foodPairingList = document.createElement('ul')
+        foodPairingList.setAttribute('id', 'beer-food_pairing-list')
+        foodPairingList.append(
+          ...beer.food_pairing.map(x => {
+            let ele = document.createElement('li')
+            ele.textContent = x
+            return ele
+          })
+        )
+        document.querySelector('#beer-food_pairing').append(foodPairingList)
+
+        document.querySelector('#beer-tagline').textContent = beer.tagline
+        document.querySelector('#beer-description').textContent = beer.description
+        document.querySelector('#beer-brewers_tips-data').textContent = beer.brewers_tips
+        document.querySelector('#beer-contributed_by-data').textContent = beer.contributed_by
+
+        let ingredientsBody = document.createElement('tbody')
+        ingredientsBody.setAttribute('id', 'beer-ingredients')
+        ingredientsBody.append(
+          ...beer.ingredients.map(category => {
+            let tr = document.createElement('tr')
+            tr.append(
+              ...category.map(item => {
+                let tdCategory = document.createElement('td')
+                let tdName = document.createElement('td')
+                let tdAmount = document.createElement('td')
+              })
+            )
+            return tr
+          })
+        )
+        document.querySelector('#beer-ingredients').append(ingredientsBody)
 
         initMaterialize()
       })
     </script>
   </body>
 </html>
-/* beer-first_brewed beer-ph beer-attenuation_level beer-boil_volume beer-boil_volume-value beer-boil_volume-unit
-beer-food_pairing beer-food_pairing-list */
