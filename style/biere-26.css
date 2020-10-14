@@ -1,0 +1,31 @@
+.desc-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.list {
+    list-style: square;
+}
+
+.img-container {
+    width: 40%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.t-head {
+    background-color: #b5b4b4;
+    color: white;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.comments {
+    margin-top: 8rem;
+}
+
+footer {
+    min-height: 5rem;
+}
