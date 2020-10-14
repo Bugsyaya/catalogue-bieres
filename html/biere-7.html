@@ -19,46 +19,59 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="col s5">
-                <div class="col s6 center">
-                    <img class="materialboxed" width="200" src="../media/biere-7.png">
-                    Imperial Black Belgian Ale.
-<div class="row">
-  <i class="small material-icons">star</i>
-  <i class="small material-icons">star</i>
-  <i class="small material-icons">star</i>
-  <i class="small material-icons">star</i>
-  <i class="small material-icons">star_border</i>
+        <div class="row center">
+            <div class="col s7">
+                <div class="row center">
+                    <div class="col s5 center">
+                        <img class="materialboxed center" width="200" src="../media/biere-7.png">
+                        Imperial Black Belgian Ale.
+                        <div class="row">
+                            <i class="small material-icons">star</i>
+                            <i class="small material-icons">star</i>
+                            <i class="small material-icons">star</i>
+                            <i class="small material-icons">star</i>
+                            <i class="small material-icons">star_border</i>
 
-</div>
-                </div>
-                <div class="col s6">
-                    <ul class="collection">
-                        <li>07/2012</li>
-                        <li>5.3</li>
-                        <li>84</li>
-                        <li>25 litres</li>
-                        <li>food_pairing</li>
+                        </div>
+                    </div>
+                    <div class="col s7 left-align">
+                        <ul>
+                            <li>Date de création : <span class="amber-text text-darken-1">07/2012</span></li>
+                            <li>PH : <span class="amber-text text-darken-1">5.3</span></li>
+                            <li>Attenuation level : <span class="amber-text text-darken-1">84</span></li>
+                            <li>Boil volume :<span class="amber-text text-darken-1">25 litres</span></li>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger btn amber' href='#' data-target='dropdown1'>Food pairing :</a>
 
-                        <li>Tandoori lamb with pomegranate</li>
-                        <li>Beef Wellington with a red wine jus</li>
-                        <li>Raspberry chocolate torte</li>
-                        <p>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Déjà bu</span>
-                            </label>
-                        </p>
-                        <li>24/10/2019</li>
-                        <p>84</li>
-                    </ul>
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#!">Tandoori lamb with pomegranate</a></li>
+                                <li><a href="#!">Beef Wellington with a red wine jus</a></li>
+                                <li><a href="#!">Raspberry chocolate torte</a></li>
+                            </ul>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Déjà bu</span>
+                                </label>
+                            </p>
+                                <input type="text" class="datepicker">
+                            <p>84</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <p class="left-align">An Imperial Black Belgian Ale aged in old Invergordon Scotch whisky barrels
+                    with mountains of raspberries, tayberries and blackberries in each cask. Decadent but light and
+                    dry, this beer would make a fantastic base for ageing on pretty much any dark fruit - we used
+                    raspberries, tayberries and blackberries beause they were local.</p>
+                <p class="left-align">Don't worry too much about controlling the temperature with the Belgian yeast
+                    strain - just make sure it doesn't rise above 30°C!</p>
+                <p>Sam Mason &lt;samjbmason></p>
 
 
             </div>
-            <div class="col s1"></div>
-            <div class="col s6">
+            <div class="col s5">
                 <table>
                     <thead>
                         <tr>
@@ -85,10 +98,55 @@
                             <td>0.44k</td>
                         </tr>
                     </tbody>
+                    <thead>
+                        <tr>
+                            <th>hops</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Extra Pale</td>
+                            <td>9.69k </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Chocolate</td>
+                            <td>0.19k</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Carafa Special Malt Type 3</td>
+                            <td>0.44k</td>
+                        </tr>
+                    </tbody>
                 </table>
+                <div class="input-field col s12">
+                    <p>Commentaire</p>
+                    <textarea id="textarea1" class="materialize-textarea collection"></textarea>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row center">
+                <a class="waves-effect waves-light btn amber">Précedent</a>
+                <a class="waves-effect waves-light btn amber">Suivant</a>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row center">
+                    Glenn FilA2
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
