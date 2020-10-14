@@ -43,6 +43,10 @@ body {
     transform: translateX(-50%);
 }
 
+.beer-buttons a {
+    margin: 0 .5rem;
+}
+
 .beer-edit-button {
     position: absolute;
     bottom: 15%;
