@@ -13,18 +13,18 @@
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper deep-purple lighten-3">
         <a href="/" class="brand-logo">
           <i class="large material-icons">arrow_back</i>
         </a>
-        <span href="#" class="brand-logo center">rigwild</span>
+        <span href="#" id="beer-name" class="brand-logo center"></span>
       </div>
     </nav>
 
     <main class="container">
       <div class="row">
         <div class="col s6">
-          <div class="col s6">
+          <div class="col s7">
             <div>
               <img class="materialboxed" width="70" id="beer-image_url" />
             </div>
@@ -39,9 +39,12 @@
             <div id="beer-description"></div>
             <div id="beer-brewers_tips">Brewer tips : <span id="beer-brewers_tips-data"></span></div>
             <div id="beer-contributed_by">Contributed by : <span id="beer-contributed_by-data"></span></div>
+            <div id="beer-contributed_by">
+              API URI : <a href="https://api.punkapi.com/v2/beers/18">api.punkapi.com/v2/beers/18</a>
+            </div>
           </div>
 
-          <div class="col s6">
+          <div class="col s5">
             <div id="beer-first_brewed">
               First brewed :
               <span id="beer-first_brewed-data"></span>
@@ -65,7 +68,10 @@
                 <span>Déjà bu</span>
               </label>
             </div>
-            <div id="beer-tasted_date">Date de dégustation : 2020-10-14</div>
+            <div id="beer-tasted_date">
+              Date de dégustation :
+              <input type="text" class="datepicker" />
+            </div>
           </div>
         </div>
         <div class="col s6">
@@ -78,15 +84,16 @@
               </tr>
             </thead>
           </table>
+          <textarea class="materialize-textarea" placeholder="Add a comment..."></textarea>
         </div>
       </div>
 
       <section class="row">
         <div class="col s6 offset-s4">
-          <a href="/html/biere-19" class="waves-effect waves-light btn-large"
+          <a href="/html/biere-17.html" class="waves-effect waves-light btn-large"
             >Previous <i class="material-icons left">arrow_back</i></a
           >
-          <a href="/html/biere-19" class="waves-effect waves-light btn-large"
+          <a href="/html/biere-19.html" class="waves-effect waves-light btn-large"
             >Suivant <i class="material-icons right">arrow_forward</i></a
           >
         </div>
@@ -107,8 +114,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="module">
       const initMaterialize = () => {
-        let elems = document.querySelectorAll('.materialboxed')
-        let instances = M.Materialbox.init(elems, {})
+        M.Materialbox.init(document.querySelectorAll('.materialboxed'), {})
+        M.Datepicker.init(document.querySelectorAll('.datepicker'), {})
       }
 
       const URI = 'https://api.punkapi.com/v2/beers/18'
@@ -121,6 +128,7 @@
         const beer = await loadBeer()
         console.log(beer)
 
+        document.querySelector('#beer-name').textContent = beer.name
         document.querySelector('#beer-image_url').setAttribute('src', beer.image_url)
         document.querySelector('#beer-first_brewed-data').textContent = beer.first_brewed
         document.querySelector('#beer-ph-data').textContent = beer.ph
@@ -130,9 +138,11 @@
 
         let foodPairingList = document.createElement('ul')
         foodPairingList.setAttribute('id', 'beer-food_pairing-list')
+        foodPairingList.setAttribute('class', 'collection')
         foodPairingList.append(
           ...beer.food_pairing.map(x => {
             let ele = document.createElement('li')
+            ele.setAttribute('class', 'collection-item')
             ele.textContent = x
             return ele
           })
@@ -152,13 +162,21 @@
 
           if (typeof categoryContent === 'string') categoryContent = [{ name: categoryContent }]
 
+          let trCategory = document.createElement('tr')
+          let tdCategory = document.createElement('td')
+          let tdName = document.createElement('td')
+          let tdAmount = document.createElement('td')
+          tdCategory.textContent = category
+          trCategory.append(tdCategory, tdName, tdAmount)
+          ingredientsBody.append(trCategory)
+
           ingredientsBody.append(
-            ...categoryContent.map(item => {
+            ...categoryContent.map((item, i) => {
               let tr = document.createElement('tr')
               let tdCategory = document.createElement('td')
               let tdName = document.createElement('td')
               let tdAmount = document.createElement('td')
-              tdCategory.textContent = category
+
               tdName.textContent = item.name
               if (item.add && item.attribute) tdName.textContent += ` - Add ${item.attribute} at time : ${item.add}`
 
