@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beer 18</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="../style/biere-18.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">
+          <i class="large material-icons">arrow_back</i>
+        </a>
+        <span href="#" class="brand-logo center">rigwild</span>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="row">
+        <div class="col s6">
+          <div class="col s6">
+            <img class="materialboxed" width="70" id="beer-image_url" />
+          </div>
+          <div class="col s6">
+            <div id="beer-first_brewed"></div>
+            <div id="beer-ph"></div>
+            <div id="beer-attenuation_level"></div>
+            <div id="beer-boil_volume">
+              <span id="beer-boil_volume-value"></span> <span id="beer-boil_volume-unit"></span>
+            </div>
+            <div id="beer-food_pairing">
+              <ul id="beer-food_pairing-list"></ul>
+            </div>
+            <div id="beer-deja_bu">
+              <label>
+                <input type="checkbox" id="beer-deja_bu-checkbox" checked="checked" />
+                <span>Déjà bu</span>
+              </label>
+            </div>
+            <div id="beer-tasted_date">Date de dégustation : 2020-10-14</div>
+          </div>
+        </div>
+        <div class="col s6">
+          <table class="striped highlight responsive-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12 offset-l5">
+            <h5 class="white-text">rigwild - Promo 2022</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module">
+      const initMaterialize = () => {
+        let elems = document.querySelectorAll('.materialboxed')
+        let instances = M.Materialbox.init(elems, {})
+      }
+
+      const URI = 'https://api.punkapi.com/v2/beers/18'
+      const loadBeer = () =>
+        fetch(URI)
+          .then(res => res.json())
+          .then(res => res[0])
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        const beer = await loadBeer()
+        console.log(beer)
+
+        document.querySelector('#beer-image_url').setAttribute('src', beer.image_url)
+
+        initMaterialize()
+      })
+    </script>
+  </body>
+</html>
+/* beer-first_brewed beer-ph beer-attenuation_level beer-boil_volume beer-boil_volume-value beer-boil_volume-unit
+beer-food_pairing beer-food_pairing-list */
