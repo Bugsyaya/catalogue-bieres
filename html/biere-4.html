@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Compiled and minified CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-		/>
 
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<link rel="stylesheet" href="./style/index.css" />
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-	</head>
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./style/index.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <script type="text/javascript"
+        src="./dropdown.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
 <body>
-    <div class="section">
+    <div class="section" style="text-align: center;">
         <h3>Pilsner Lager</h3>
     </div>
     <div class="divider"></div>
     <div class="container">
+        <div class="row">
+            <div class="col s2">
+                <img class="" width="300" src="../media/biere-4.png">
+            </div>
+            <div class="col s3">
+                <div class="container">
+                    <div class="row">
+                        <span class="flow-text">
+                            first brewed : 09/2013
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="flow-text">
+                            PH : 4.4
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="flow-text">
+                            Attenuation level : 80
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="flow-text">
+                            Boil volume : 25 L
+                        </span>
+                    </div>
+                    <div class="row">
+                        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i
+                                class="tiny material-icons">restaurant</i> Food pairings</a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">Spicy crab cakes</a></li>
+                            <li><a href="#!">Spicy cucumber and carrot Thai salad</a></li>
+                            <li><a href="#!">Sweet filled dumplings</a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>Deja bu</span>
+                          </label>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="datepicker" placeholder="Date de degustation">
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Malt</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Extra Pale</td>
+                            <td>4.58 kg</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Caramalt</td>
+                            <td>0.25 kg</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Dark Crystal</td>
+                            <td>0.06 kg</td>
+                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Hops</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td></td>
+                            <td>Centennial</td>
+                            <td>5 g</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Amarillo</td>
+                            <td>5 g</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Centennial</td>
+                            <td>5 g</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Amarillo</td>
+                            <td>10 g</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Centennial</td>
+                            <td>17.5 g</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Amarillo</td>
+                            <td>17.5 g</td>
+                        </tr>
+                        <thead>
+                            <tr>
+
+                                <th>Yeast</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td></td>
+                            <td>Wyeast 2007 - Pilsen Lager™</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <img class="" width="200" src="../media/biere-4.png">
-    <table class="striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
-            </tr>
-            <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-            </tr>
-            <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
-            </tr>
-        </tbody>
-    </table>
-    <!--Import jQuery before materialize.js-->
-
 </body>
