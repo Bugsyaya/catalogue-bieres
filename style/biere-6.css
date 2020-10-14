@@ -4,6 +4,39 @@ body {
     flex-direction: column;
 }
 
-main {
-    flex: 1 0 auto;
+.beer-container {
+    margin-top: 3rem;
+}
+
+.beer-img {
+    height: 300px;
+    background-size: contain;
+}
+
+.beer-details {
+    margin-left: 2rem;
+}
+
+.beer-comment {
+    margin-top: 5rem;
+}
+
+.beer-description {
+    padding-right: 5rem
+}
+
+.beer-navbar {
+    position: sticky!important;
+    top: 0!important;
+}
+
+.beer-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+.beer-buttons {
+    position: sticky;
+    bottom: 5rem;
 }

@@ -4,38 +4,92 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../style/biere-6.css">
-    <title>Bière 6</title>
+    <title>Electric India</title>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Bière 6</a>
+    <nav class=" beer-navbar">
+      <div class="nav-wrapper indigo lighten-2">
+        <a href="#" class="brand-logo center">Electric India</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li>Back button</li>
+          <a class="waves-effect waves-light btn">Retour</a>
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <div class="container beer-container">
       <div class="row">
         <div class="col s4">
           <div class="row">
-            <div class="col s7">picture</div>
-            <div class="col s5">details</div>
+            <div class="col s3">
+              <img class="beer-img" src="https://images.punkapi.com/v2/6.png" alt="biere6">
+            </div>
+            <div class="col s9">
+              <div class="beer-details">
+                <label>
+                  <input class="filled-in" type="checkbox" />
+                  <span>Déjà bu</span>
+                </label>
+              </div>
+            </div>
           </div>
-          <div class="row">
+          <div class="row beer-description">
             <div class="col s12">
-              <div>stars</div>
+              <div>
+                <h4>Electric India</h4>
+              </div>
+              <div>
+                Note
+                <p class="range-field">
+                  <input type="range" id="rank" min="1" max="5" value="1"/>
+                </p>
+              </div>
               <div>description</div>
             </div>
           </div>
         </div>
         <div class="col s8">
-          <div class="row">table</div>
-          <div class="row">comment</div>
+          <div class="row">
+            <table>
+              <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>Item 1.1</td>
+                <td>Item 1.2</td>
+                <td>Item 1.3</td>
+              </tr>
+              <tr>
+                <td>Item 2.1</td>
+                <td>Item 2.2</td>
+                <td>Item 2.3</td>
+              </tr>
+              <tr>
+                <td>Item 3.1</td>
+                <td>Item 3.2</td>
+                <td>Item 3.3</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row beer-comment">
+            <label for="comment">Commentaires</label>
+            <textarea row id="comment" class="materialize-textarea"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row beer-buttons">
+        <div class="col s12 center">
+          <a class="waves-effect waves-light btn">Précédent</a>
+          <a class="waves-effect waves-light btn">Suivant</a>
         </div>
       </div>
     </div>
-    <footer class="page-footer">
+    <footer class="page-footer indigo lighten-2 beer-footer">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
