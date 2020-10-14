@@ -12,3 +12,7 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.button-container>.btn:first-of-type{
+    margin-right: 10px;
+}
