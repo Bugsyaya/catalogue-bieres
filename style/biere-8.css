@@ -12,9 +12,19 @@ nav {
 	position: sticky;
 }
 
+strong, th {
+    color: #004d40;
+    font-weight: 600;
+}
+
+/* IMAGE AND INFO COLLECTION */
+.img-wrapper {
+    max-width: 33.3%;
+}
+
 img {
-	max-height: 35vh;
-	margin: 10px;
+    max-height: 35vh;
+    margin: 10px 10px;
 }
 
 li > ul {
@@ -25,9 +35,16 @@ li > ul > li {
 	list-style-type: circle;
 }
 
+
+/* TAGLINE */
+.tagline {
+    margin-top: 5px;
+}
+
 .tagline::before, .tagline::after {
-	font-family: Cambria, serif;
+	font-family: Times, serif;
 	font-size: 25px;
+    color: #004d40;
 	line-height: normal;
 }
 
@@ -39,13 +56,21 @@ li > ul > li {
 	content: '”';
 }
 
+/* RATING */
+.rating {
+    color: #004d40;
+    margin-top: 10px;
+}
+
+/* DATEPICKER COLORS */
 .datepicker-date-display, .datepicker-table-wrapper .is-selected {
 	background-color: #004d40;
 }
 
-strong, .datepicker-container .btn-flat, .datepicker-table-wrapper .is-today * {
+.datepicker-container .btn-flat, .datepicker-table-wrapper .is-today * {
 	color: #004d40;
 }
+
 
 ::placeholder {
 	color: rgba(0,0,0,0.7);

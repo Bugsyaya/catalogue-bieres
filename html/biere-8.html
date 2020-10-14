@@ -14,11 +14,11 @@
 	
 	<!-- Date picker -->
 	<script>
-       document.addEventListener('DOMContentLoaded', () =>
+       document.addEventListener('DOMContentLoaded', () => {
            M.Datepicker.init(document.querySelectorAll('.datepicker'), {
                format: 'dd/mm/yyyy',
-	            firstDay: 1,
-               i18n : {
+               firstDay: 1,
+               i18n: {
                    labelMonthNext: 'Mois suivant',
                    labelMonthPrev: 'Mois précédent',
                    labelMonthSelect: 'Selectionner le mois',
@@ -28,12 +28,12 @@
                    weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
                    weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
                    weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
-	                done: 'OK',
+                   done: 'OK',
                    cancel: 'Annuler',
                    close: 'Fermer',
                }
-           })
-       );
+           });
+       });
 	</script>
 </head>
 <body>
@@ -51,22 +51,22 @@
 		<!-- Left column -->
 		<div class="col s12 l6 left-col">
 			<!-- Image -->
-			<div class="col">
+			<div class="col img-wrapper">
 				<img class="responsive-img" src="../media/biere-8.png" alt="Bière Fake Lager">
 			</div>
 			<!-- Info -->
 			<ul class="col s8 collection">
 				<li class="collection-item">Depuis <strong>Mars 2013</strong></li>
 				<li class="collection-item"><strong>4.4</strong> de pH</li>
-				<li class="collection-item">Atténuation: <strong>78</strong></li>
+				<li class="collection-item">Atténuation: <strong>78 %</strong></li>
 				<li class="collection-item">Volume d'ébullition: <strong>25 L</strong></li>
 				<li class="collection-item">
-					Accords
-					<ul class="browser-default">
-						<li>Gateaux de crabe frit et salsa à l'avocat</li>
-						<li>Rouleaux au porc frit et sauce piquante</li>
-						<li>Key Lime Pie</li>
-					</ul>
+                    Accords
+                    <ul class="browser-default">
+                        <li>Gateaux de crabe frit et salsa à l'avocat</li>
+                        <li>Rouleaux au porc frit et sauce piquante</li>
+                        <li>Key Lime Pie</li>
+                    </ul>
 				</li>
 			</ul>
 			
@@ -78,22 +78,26 @@
 				<label class="black-text col"><input type="checkbox"> <span>Déjà bu</span></label>
 				<label class="picker"><input type="text" class="datepicker col" placeholder="Date de dégustation"></label>
 			</div>
-			
-			<div class="col s12">
-				<!-- Vote -->
-				<div class="vote">
-					<i class="material-icons">star</i>
-					<i class="material-icons">star</i>
-					<i class="material-icons">star</i>
-					<i class="material-icons">star_half</i>
-					<i class="material-icons">star_border</i>
-				</div>
+
+            <!-- Rating -->
+			<div class="col s12 rating">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star_border</i>
 			</div>
 			
 			<p class="col s12">
 				Fake is the new black. Fake is where it is at. Fake Art, fake brands, fake breasts, and fake lager. We want to play our part in the ugly fallout from the Lager Dream. Say hello to Fake Lager – a zesty, floral 21st century faux masterpiece with added BrewDog bitterness.
 			</p>
 		</div>
+
+        <!-- Mobile buttons -->
+        <div class="col s12 center-align hide-on-large-only">
+            <a class="btn"><i class="material-icons left">arrow_back</i> Précédent</a>
+            <a class="btn"><i class="material-icons right">arrow_forward</i> Suivant</a>
+        </div>
 		
 		<!-- Right column -->
 		<div class="col s12 l6">
@@ -122,6 +126,12 @@
 				</tbody>
 			</table>
 		</div>
+
+        <!-- Desktop buttons -->
+        <div class="col s12 center-align hide-on-med-and-down">
+            <a class="btn"><i class="material-icons left">arrow_back</i> Précédent</a>
+            <a class="btn"><i class="material-icons right">arrow_forward</i> Suivant</a>
+        </div>
 	</div>
 </body>
 </html>
