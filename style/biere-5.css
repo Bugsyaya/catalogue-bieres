@@ -11,3 +11,7 @@ main {
 .page-footer {
     padding-top: 0;
 }
+
+.fixed-action-btn {
+    bottom: 73px;
+}
