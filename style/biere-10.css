@@ -3,3 +3,12 @@ tr,td,th {
     padding-top: 1px;
     padding-bottom: 1px;
 }
+
+.img-biere {
+    height: 400px;
+    width: 100px;
+}
+
+.blue {
+    background-color: cyan;
+}
