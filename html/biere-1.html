@@ -5,7 +5,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="../style/biere-1.css" rel="stylesheet">
       <!-- Compiled and minified JavaScript -->   
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
    </head>
    <body>
       <nav>
@@ -51,7 +51,7 @@
                         <input type="checkbox" class="filled-in" checked="checked" />
                         <span>Déjà bu?</span>
                       </label>
-                     <p><span class="dataName">Date de dégustation: </span>14/0/2020</p>
+                     <p><form><label>Date de dégustation:</label>   <input type="date" class="datepicker" value="2020-10-14"></form></p>
                   </div>
                </div>
             </div>
@@ -131,5 +131,11 @@
             <p>Audo Thomas</p>
          </div>
       </footer>
+      <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.datepicker');
+                var instances = M.Datepicker.init(elems, options);
+            });
+      </script>
    </body>
 </html>
