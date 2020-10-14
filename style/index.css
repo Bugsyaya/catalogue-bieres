@@ -16,6 +16,7 @@ html {
 
 img {
 	max-height: 300px;
+	width: auto !important;
 }
 
 .biere {
