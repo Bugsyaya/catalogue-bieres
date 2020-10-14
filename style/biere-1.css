@@ -6,6 +6,10 @@
     margin-left: 1em;
 }
 
+.alignCenterTextFooter{
+    text-align: center;
+}
+
 .spacer {
     margin: 4em;
 }
