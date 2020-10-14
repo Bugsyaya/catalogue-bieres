@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.beer-container {
+    margin-top: 3rem;
+}
+
+.beer-img {
+    height: 300px;
+    background-size: contain;
+}
+
+.beer-details {
+    margin-left: 1rem;
+}
+
+.beer-comment {
+    margin-top: 5rem;
+}
+
+.beer-description {
+    padding-right: 5rem
+}
+
+.beer-description div {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.beer-description p {
+   font-size: .9rem;
+    margin-top: .25rem;
+}
+
+.beer-description i {
+    font-size: .75rem;
+}
+
+.beer-navbar {
+    position: sticky!important;
+    top: 0!important;
+}
+
+.beer-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+.beer-buttons {
+    position: fixed;
+    left: 50%;
+    bottom: 4rem;
+    transform: translateX(-50%);
+}
+
+.beer-buttons a {
+    margin: 0 .5rem;
+}
+
+.beer-edit-button {
+    position: absolute;
+    bottom: 15%;
+    right: 5rem;
+    border-radius: 2rem;
+    color: #26a69a;
+    border: 1px solid #26a69a;
+    background: none;
+    box-shadow: none;
+}
+
+.beer-edit-button:hover {
+    color: white;
+}
