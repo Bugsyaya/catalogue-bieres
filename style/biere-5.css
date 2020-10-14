@@ -15,3 +15,15 @@ main {
 .fixed-action-btn {
     bottom: 73px;
 }
+
+.rate, .already-drinked, .degustation-date {
+    margin: 20px 0;
+}
+
+.beer-image {
+    max-height: 450px;
+}
+
+.nav-wrapper {
+    margin: 0 20px;
+}
