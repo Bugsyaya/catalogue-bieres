@@ -15,7 +15,11 @@ li {
 
 .no-margin {
     margin: 0;
-    height: 1px;
+    height: 2px;
+}
+
+.black-txt {
+    color: black;
 }
 
 .blue {
