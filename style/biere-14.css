@@ -2,3 +2,20 @@ footer {
     text-align: center;
     padding: 5px;
 }
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.beer-info>* {
+    margin: 1em auto;
+}
+
+.beer-img {
+    height: 400px;
+}
+
+.beer-info label {
+    font-weight: bold;
+}
