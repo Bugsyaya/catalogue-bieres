@@ -5,12 +5,13 @@ tr,td,th {
 }
 
 .img-biere {
-    height: 400px;
-    width: 100px;
+    width: 125%;
+    position: relative;
+    padding-right: 15%;
 }
 
 li {
-    padding-left: 50px;
+    padding-left: 10%;
 }
 
 .no-margin {
