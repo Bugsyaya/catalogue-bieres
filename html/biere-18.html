@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="col s6">
-          <table class="striped highlight responsive-table">
+          <table id="beer-ingredients-table" class="striped highlight responsive-table">
             <thead>
               <tr>
                 <th>Category</th>
@@ -77,11 +77,20 @@
                 <th>Amount</th>
               </tr>
             </thead>
-
-            <tbody id="beer-ingredients"></tbody>
           </table>
         </div>
       </div>
+
+      <section class="row">
+        <div class="col s6 offset-s4">
+          <a href="/html/biere-19" class="waves-effect waves-light btn-large"
+            >Previous <i class="material-icons left">arrow_back</i></a
+          >
+          <a href="/html/biere-19" class="waves-effect waves-light btn-large"
+            >Suivant <i class="material-icons right">arrow_forward</i></a
+          >
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -137,20 +146,32 @@
 
         let ingredientsBody = document.createElement('tbody')
         ingredientsBody.setAttribute('id', 'beer-ingredients')
-        ingredientsBody.append(
-          ...beer.ingredients.map(category => {
-            let tr = document.createElement('tr')
-            tr.append(
-              ...category.map(item => {
-                let tdCategory = document.createElement('td')
-                let tdName = document.createElement('td')
-                let tdAmount = document.createElement('td')
-              })
-            )
-            return tr
-          })
-        )
-        document.querySelector('#beer-ingredients').append(ingredientsBody)
+        Object.entries(beer.ingredients).map(([category, categoryContent]) => {
+          // console.log(category)
+          // console.log(categoryContent)
+
+          if (typeof categoryContent === 'string') categoryContent = [{ name: categoryContent }]
+
+          ingredientsBody.append(
+            ...categoryContent.map(item => {
+              let tr = document.createElement('tr')
+              let tdCategory = document.createElement('td')
+              let tdName = document.createElement('td')
+              let tdAmount = document.createElement('td')
+              tdCategory.textContent = category
+              tdName.textContent = item.name
+              if (item.add && item.attribute) tdName.textContent += ` - Add ${item.attribute} at time : ${item.add}`
+
+              if (item.amount) tdAmount.textContent = `${item.amount.value} ${item.amount.unit}`
+
+              tr.append(tdCategory)
+              tr.append(tdName)
+              tr.append(tdAmount)
+              return tr
+            })
+          )
+        })
+        document.querySelector('#beer-ingredients-table').append(ingredientsBody)
 
         initMaterialize()
       })
