@@ -6,27 +6,60 @@
 	
 	<!-- Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="../style/biere-8.css">
+	
+	<!-- Date picker -->
+	<script>
+       document.addEventListener('DOMContentLoaded', () =>
+           M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+               format: 'dd/mm/yyyy',
+	            firstDay: 1,
+               i18n : {
+                   labelMonthNext: 'Mois suivant',
+                   labelMonthPrev: 'Mois précédent',
+                   labelMonthSelect: 'Selectionner le mois',
+                   labelYearSelect: 'Selectionner une année',
+                   months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                   monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+                   weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+                   weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+                   weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+	                done: 'OK',
+                   cancel: 'Annuler',
+                   close: 'Fermer',
+               }
+           })
+       );
+	</script>
 </head>
 <body>
 	<!-- Title -->
-	<h2 class="center-align">Fake Lager</h2>
-	<div class="divider grey darken-4"></div>
+	<nav>
+		<div class="nav-wrapper teal darken-4">
+			<a class="brand-logo center">Fake Lager</a>
+			<ul id="nav-mobile">
+				<li><a href="../index.html"><i class="material-icons">arrow_back</i></a></li>
+			</ul>
+		</div>
+	</nav>
 	
 	<div class="container row">
 		<!-- Left column -->
 		<div class="col s6">
-			<div class="col s3 valign-wrapper">
+			<!-- Image -->
+			<div class="col">
 				<img class="responsive-img" src="../media/biere-8.png" alt="Bière Fake Lager">
 			</div>
-			<ul class="collection">
+			<!-- Info -->
+			<ul class="col s8 collection">
 				<li class="collection-item">Depuis <strong>Mars 2013</strong></li>
 				<li class="collection-item"><strong>4.4</strong> de pH</li>
 				<li class="collection-item">Atténuation: <strong>78</strong></li>
-				<li class="collection-item">Volume d'ébullition: <strong>20L</strong></li>
+				<li class="collection-item">Volume d'ébullition: <strong>25 L</strong></li>
 				<li class="collection-item">
 					Accords
 					<ul class="browser-default">
@@ -36,12 +69,28 @@
 					</ul>
 				</li>
 			</ul>
+			
+			<div class="col s12 valign-wrapper">
+				<label class="black-text col"><input type="checkbox"> <span>Déjà bu</span></label>
+				<label class="picker"><input type="text" class="datepicker col" placeholder="Date de dégustation"></label>
+			</div>
+			
+			<div class="col s12">
+				<!-- Vote -->
+				<div class="vote">
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star</i>
+					<i class="material-icons">star_half</i>
+					<i class="material-icons">star_border</i>
+				</div>
+			</div>
 		</div>
 		
 		<!-- Right column -->
 		<div class="col s6">
 			<!-- Ingredients table -->
-			<table>
+			<table class="card-panel">
 				<thead>
 					<tr><th colspan="2">Ingrédients</th> <th>Ajout</th> <th>Quantité</th></tr>
 				</thead>

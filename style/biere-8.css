@@ -1,5 +1,16 @@
+nav {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.container {
+	margin-top: 80px;
+}
+
 img {
 	max-height: 35vh;
+	margin-bottom: 20px;
 }
 
 li > ul {
@@ -10,6 +21,22 @@ li > ul > li {
 	list-style-type: circle;
 }
 
-.container {
-	margin-top: 20px;
+.datepicker-date-display, .datepicker-table-wrapper .is-selected {
+	background-color: #004d40;
+}
+
+.datepicker-container .btn-flat, .datepicker-table-wrapper .is-today * {
+	color: #004d40;
+}
+
+::placeholder {
+	color: rgba(0,0,0,0.7);
+}
+
+.picker {
+	margin-left: 10px;
+}
+
+.vote {
+	margin-top: 10px;
 }
