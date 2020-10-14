@@ -1,3 +1,10 @@
 .waves-effect {
     background-color: #882675;
 }
+
+.btn-floating {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
