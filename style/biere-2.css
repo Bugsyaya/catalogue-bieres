@@ -1,12 +1,15 @@
 img {
     width: 12%;
     display: inline-block;
-
 }
 
-table {
-    display: inline-block;
-    float: left;
+
+header {
+    margin: 0;
+    background-color: #882675;
+    color: #ffffff;
+    text-decoration: none;
+    justify-content: center;
 }
 
 .waves-effect {
