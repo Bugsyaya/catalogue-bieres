@@ -9,14 +9,27 @@
 
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<link rel="stylesheet" href="../style/biere-10.css" />
+        <link rel="stylesheet" href="../style/biere-10.css" />
+        
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body>
         <div class="container">
             <!-- Page Content goes here -->
-            
-            <!-- Image de la bière -->
+
+            <!-- Navbar -->
+            <nav>
+                <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Bramling X</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="../index.html"><i class="material-icons">arrow_back</i></a></li>
+                </ul>
+                </div>
+            </nav>
+        
             <div class="row">
+                <!-- Image de la bière -->
                 <div class="col s1">
                     <img
                         src="https://images.punkapi.com/v2/10.png" 
@@ -25,6 +38,9 @@
                         width="100px" 
                     />
                 </div>
+
+                
+                <!-- Tableau des ingrédients -->
                 <div class="col s6 offset-s5">
                     <table class ="medium-tab">
                         <!-- MALT -->
@@ -127,7 +143,6 @@
                 </div>
             </div>
 
-            <!-- Tableau des ingrédients -->
             
 
 
@@ -138,8 +153,8 @@
 
             <!-- Boutons Précédent/Suivant -->
             <div class="row">
-                <div class="col s2 offset-s4"><a class="waves-effect waves-light btn">Précédent</a></div>
-                <div class="col s2"><a class="waves-effect waves-light btn">Suivant</a></div>
+                <div class="col s2 offset-s4"><a class="waves-effect waves-light btn" href="./biere-9.html">Précédent</a></div>
+                <div class="col s2"><a class="waves-effect waves-light btn" href="./biere-11.html">Suivant</a></div>
             </div>
           </div>
     </body>
