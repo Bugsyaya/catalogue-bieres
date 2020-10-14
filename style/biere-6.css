@@ -37,6 +37,15 @@ body {
 }
 
 .beer-buttons {
-    position: sticky;
-    bottom: 5rem;
+    position: absolute;
+    left: 50%;
+    bottom: 4rem;
+    transform: translateX(-50%);
+}
+
+.beer-edit-button {
+    position: absolute;
+    bottom: 15%;
+    right: 5rem;
+    border-radius: 2rem;
 }
