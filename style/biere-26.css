@@ -1,23 +1,31 @@
-.beer-desc {
-    background-color: yellow;
-}
-
 .desc-row {
     display: flex;
     flex-direction: row;
 }
 
-.t2 {
-    background-color: blue;
-}
-
 .list {
     list-style: square;
-    background-color: aqua;
 }
 
 .img-container {
     width: 40%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.t-head {
+    background-color: #b5b4b4;
+    color: white;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.comments {
+    margin-top: 8rem;
+}
+
+footer {
+    min-height: 5rem;
 }
