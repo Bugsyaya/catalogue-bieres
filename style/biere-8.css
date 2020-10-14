@@ -8,9 +8,13 @@ nav {
 	margin-top: 80px;
 }
 
+.left-col {
+	position: sticky;
+}
+
 img {
 	max-height: 35vh;
-	margin-bottom: 20px;
+	margin: 10px;
 }
 
 li > ul {
@@ -21,11 +25,25 @@ li > ul > li {
 	list-style-type: circle;
 }
 
+.tagline::before, .tagline::after {
+	font-family: Cambria, serif;
+	font-size: 25px;
+	line-height: normal;
+}
+
+.tagline::before {
+	content: '“';
+}
+
+.tagline::after {
+	content: '”';
+}
+
 .datepicker-date-display, .datepicker-table-wrapper .is-selected {
 	background-color: #004d40;
 }
 
-.datepicker-container .btn-flat, .datepicker-table-wrapper .is-today * {
+strong, .datepicker-container .btn-flat, .datepicker-table-wrapper .is-today * {
 	color: #004d40;
 }
 
