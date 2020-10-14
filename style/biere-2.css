@@ -1,5 +1,12 @@
 img {
     width: 12%;
+    display: inline-block;
+
+}
+
+table {
+    display: inline-block;
+    float: left;
 }
 
 .waves-effect {
