@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../style/biere-9.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <title>Catalogue de bières</title>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="../index.html" class="brand-logo">
+            <i class="material-icons brand-back">keyboard_arrow_left</i>
+        </a>
+        <span class="brand-logo center">Bramling X</span>
+    </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<main>
+    <div class="row">
+        <div class="col s6">
+            <div class="row">
+                <div class="col s3">
+                    <img src="../media/biere-9.png" alt="image de biere" class="custom-img">
+                </div>
+                <div class="col s9">
+                    <ul class="custom-ul-no-decoration">
+                        <li><b>first_brewed: </b> 01/2011</li>
+                        <li><b>PH:</b> 4.4</li>
+                        <li><b>boil_volume:</b> 25L</li>
+                        <li><b>food pairing:</b></li>
+                        <li>
+                            <ul class="custom-ul-decoration">
+                                <li>Warm blackberry pie</li>
+                                <li>Vinegar doused fish and chips"</li>
+                                <li>Aromatic korma curry with lemon and garlic naan</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked"/>
+                                <span>Déjà bu</span>
+                            </label>
+                        </li>
+                        <li><b>Date de dégusation:</b><br>
+                            <input type="text" class="datepicker">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <b>tagline:</b> Single Hop IPA Series - 2011.
+            </div>
+            <div class="row">
+                <h3>
+                    ★★★☆☆
+                </h3>
+            </div>
+        </div>
+        <div class="col s6 custom-col">
+            <div class="row">
+                <table class="striped centered custom-table">
+                    <thead>
+                    <tr>
+                        <th>Ingredients type</th>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Malt</td>
+                        <td>Extra Pale</td>
+                        <td>6.38</td>
+                    </tr>
+                    <tr>
+                        <td>Malt</td>
+                        <td>Crystal 150</td>
+                        <td>0.13</td>
+                    </tr>
+                    <tr>
+                        <td>Malt</td>
+                        <td>Caramalt</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <td>hops</td>
+                        <td>Bramling Cross</td>
+                        <td>0.06</td>
+                    </tr>
+                    <tr>
+                        <td>Yeast</td>
+                        <td>Wyeast 1056 - American Ale™</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s6">
+            <div class="row" style="max-width: 80%">
+                Good old Bramling Cross is elegant, refined, assured, (boring) and understated. Understated that is
+                unless you hop the living daylights out of a beer with it. This is Bramling Cross re-invented and
+                re-imagined, and shows just what can be done with English hops if you use enough of them. Poor Bramling
+                Cross normally gets lost in a woeful stream of conformist brown ales made by sleepy cask ale brewers.
+                But not anymore. This beer shows that British hops do have some soul, and is a fruity riot of
+                blackberries, pears, and plums. Reminds me of the bramble, apple and ginger jam my grandmother used to
+                make.
+            </div>
+            <div class="row" style="max-width: 80%">
+                <b>brewers_tips:</b> Getting good Bramling Cross is key. Most English hops are in leaf form (not
+                pelletised), so getting fresh hops close to harvest (September) will give this beer the right amount of
+                dark berry intensity.
+            </div>
+            <div class="row">
+                <b>contributed_by</b> Sam Mason
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="row text-area-bottom">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" style="height: 200px;"></textarea>
+                            <label for="textarea1">Commentaire</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container center button-container">
+        <a class="waves-effect waves-light btn">Précedent</a>
+        <a class="waves-effect waves-light btn">Suivant</a>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+    </div>
+</main>
+
+<footer class="page-footer">
+    <div class="container center">
+        <div class="row center">
+            <span>Léo LECLERC</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function () {
+        $('.datepicker').datepicker({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 2, // Creates a dropdown of 15 years to control year
+            today: 'Aujourd\'hui',
+            clear: 'Réinitialiser',
+            close: 'Fermer',
+            format: 'dd/mm/yyyy',
+            i18n: {
+                labelMonthNext: 'Mois suivant',
+                labelMonthPrev: 'Mois précédent',
+                labelMonthSelect: 'Selectionner le mois',
+                labelYearSelect: 'Selectionner une année',
+                monthsFull: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
+                monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
+                weekdaysFull: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
+                weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
+                weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+            }
+        });
+    });
+</script>
+</body>
+</html>

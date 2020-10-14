@@ -1,0 +1,138 @@
+<html>
+   <head>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="../style/biere-1.css" rel="stylesheet">
+      <!-- Compiled and minified JavaScript -->   
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+               <li>
+                  <a href="../index.html">
+                  <i class="material-icons">chevron_left</i>
+                  </a>
+               </li>
+            </ul>
+            <a class="brand-logo center">Buzz</a>
+         </div>
+      </nav>
+      <div class="customContainer">
+         <div class="spacer"></div>
+         <div class="row">
+            <div class="col s5">
+               <div class="row">
+                  <div class="col s6">
+                     <img src="https://images.punkapi.com/v2/keg.png" id="beerPhoto">
+                     <p class="dataName">A Real Bitter Experience.</p>
+                     <div class="row">
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">star_border</i>
+                     </div>
+                  </div>
+                  <div class="col s6">
+                     <p><span class="dataName">First brewed: </span>09/2007</p>
+                     <p><span class="dataName">PH: </span>4.4</p>
+                     <p><span class="dataName">Attenuation level: </span>75</p>
+                     <p><span class="dataName">Boil volume: </span>25 litres</p>
+                     <p><span class="dataName">Food pairing: </span></p>
+                     <ul class="collection" id="foodPairing">
+                        <li class="collection-item">Spicy chicken tikka masala</li>
+                        <li class="collection-item">Grilled chicken quesadilla</li>
+                        <li class="collection-item">Caramel toffee cake</li>
+                     </ul>
+                    <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Déjà bu?</span>
+                      </label>
+                     <p><form><label>Date de dégustation:</label>   <input type="date" class="datepicker" value="2020-10-14"></form></p>
+                  </div>
+               </div>
+            </div>
+            <div class="col s2"></div>
+            <div class="col s5">
+               <table class="responsive-table">
+                  <tbody>
+                     <tr>
+                        <td class="dataName">Malt</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>Maris Otter Extra Pale</td>
+                        <td><i>3.3 kilograms</i></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>Caramalt</td>
+                        <td><i>0.2 kilograms</i></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>Munich</td>
+                        <td><i>0.4 kilograms</i></td>
+                     </tr>
+                     <tr>
+                        <td class="dataName">Hops</td>
+                     <tr>
+                        <td></td>
+                        <td>Fuggles</td>
+                        <td><i>25 grams</i></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>First Gold</td>
+                        <td><i>25 grams</i></td>
+                     </tr>
+                     </tr>
+                     <tr>
+                        <td class="dataName">Yeast</td>
+                     <tr>
+                        <td>
+                        </td>
+                        <td>Wyeast 1056</td>
+                        <td><i>American Ale</i></td>
+                     </tr>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col s5">
+                <blockquote>
+                    <p>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
+                    <p>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.                    </p>
+                    <i>Sam Mason <samjbmason></samjbmason></i>
+                </blockquote>
+            </div>
+            <div class="col s2"></div>
+            <div class="col s5">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" style="height: 8em;"></textarea>
+                    <label for="textarea1">Votre review:</label>
+                </div>
+            </div>
+         </div>
+         <div class="col s12">
+            <div class="utilityButtons center-align">
+                <a class="waves-effect waves-light btn">Précedent</a>
+                <a class="waves-effect waves-light btn">Suivant</a>
+            </div>
+         </div>
+         <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+          </div>
+      </div>
+      <footer class="page-footer center-align">
+           <span>AUDO Thomas - FIL A2 2022</span>
+      </footer>
+   </body>
+</html>
