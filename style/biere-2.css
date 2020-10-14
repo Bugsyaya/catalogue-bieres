@@ -1,6 +1,5 @@
-img {
-    width: 12%;
-    display: inline-block;
+h2 {
+    margin: 0;
 }
 nav {
     margin: 0;
@@ -10,13 +9,19 @@ nav {
     justify-content: center;
 }
 
+img {
+    width: 50%;
+    margin: 5px;
+    display: inline-block;
+}
+
 .waves-effect {
     background-color: #882675;
+    margin: 10px;
 }
 
 .btn-floating {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 10px;
 }
