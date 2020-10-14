@@ -11,21 +11,53 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-        <script type="text/javascript"
-        src="./dropdown.js"></script>
+    <script type="text/javascript" src="./dropdown.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="section" style="text-align: center;">
-        <h3>Pilsner Lager</h3>
-    </div>
-    <div class="divider"></div>
+    <nav style="background-color:crimson;">
+        <div>
+            <a href="../index.html"><i class="large material-icons"
+                    style="display:inline-block;margin-left: 80px;margin-top: 5px;">arrow_back</i></a>
+            <a href="https://drizly.com/beer/lager/pilsner/c728" class="brand-logo center">Pilsner Lager</a>
+        </div>
+
+    </nav>
     <div class="container">
         <div class="row">
-            <div class="col s2">
-                <img class="" width="300" src="../media/biere-4.png">
+            <div class="col s3">
+                <div class="container">
+                    <div class="row center">
+                        <img width="300" src="../media/biere-4.png">
+                    </div>
+                    <div class="row center">
+                        <b class="center">Unleash the Yeast Series.</b>
+                    </div>
+                    <div class="row center">
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </div>
+                    <div class="row">
+                        <text class="center">
+                            Our Unleash the Yeast series was an epic experiment into the differences in aroma and flavour provided by switching up your yeast. We brewed up a wort with a light caramel note and some toasty biscuit flavour, and hopped it with Amarillo and Centennial for a citrusy bitterness. Everything else is down to the yeast. Pilsner yeast ferments with no fruity esters or spicy phenols, although it can add a hint of butterscotch
+                        </text>
+                    </div>
+                    <div class="row">
+                        <text class="center">
+                            Brewer tips : Play around with the fermentation temperature to get the best flavour profile from the individual yeasts. 
+                        </text>
+                    </div>
+                    <div class="row">
+                        <text class="center">
+                            Contributed by Ali Skinner 
+                        </text>
+                    </div>
+                </div>
             </div>
             <div class="col s3">
                 <div class="container">
@@ -62,7 +94,7 @@
                         <label>
                             <input type="checkbox" class="filled-in" checked="checked" />
                             <span>Deja bu</span>
-                          </label>
+                        </label>
                     </div>
                     <div class="row">
                         <input type="text" class="datepicker" placeholder="Date de degustation">
@@ -70,7 +102,7 @@
                 </div>
             </div>
             <div class="col s6">
-                <table class="striped">
+                <table class="responsive-table striped">
                     <thead>
                         <tr>
                             <th>Malt</th>
@@ -147,7 +179,21 @@
                         </tr>
                     </tbody>
                 </table>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
             </div>
+
+                
+
         </div>
     </div>
+
+    <div class="container">
+        <div class="row center ">
+            <a class="waves-effect waves-light btn" href="./biere-3.html">Précédent</a>
+            <a class="waves-effect waves-light btn" href="./biere-5.html">Suivant</a>
+        </div>
+    </div>
+
+    <footer style="background-color: crimson;" class="page-footer center">Christophe DOS SANTOS
+        NETO A2</footer>
 </body>
