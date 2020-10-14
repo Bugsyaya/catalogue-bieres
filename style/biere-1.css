@@ -13,3 +13,8 @@
 .dataName {
     font-weight: 700;
 }
+
+.customContainer {
+    margin: 0 auto;
+    width: 90%;
+}
