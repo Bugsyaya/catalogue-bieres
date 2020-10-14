@@ -1,0 +1,49 @@
+.brand-back{
+    margin-left: 10px !important;
+    font-size: 5rem !important;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.button-container>.btn:first-of-type{
+    margin-right: 10px;
+}
+
+.custom-table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+main{
+    padding: 5rem 10rem;
+}
+
+.custom-img{
+    width: 100px;
+}
+
+.custom-ul-decoration>li{
+    margin-left: 40px;
+    list-style: square !important;
+}
+
+.custom-ul-no-decoration>li{
+    margin-bottom: 10px;
+}
+
+* {
+    text-align: justify;
+}
+
