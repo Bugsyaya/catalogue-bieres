@@ -1,0 +1,23 @@
+.beer-desc {
+    background-color: yellow;
+}
+
+.desc-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.t2 {
+    background-color: blue;
+}
+
+.list {
+    list-style: square;
+    background-color: aqua;
+}
+
+.img-container {
+    width: 40%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
